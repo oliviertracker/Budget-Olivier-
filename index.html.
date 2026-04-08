@@ -3,83 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Budget Mensuel</title>
+    <title>Mon Budget</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 20px auto; padding: 20px; }
-        table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
-        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-        th { background-color: #f4f4f4; }
-        .header-pot { background-color: #e8f4fd; font-weight: bold; }
-        .total-row { background-color: #f9f9f9; font-weight: bold; }
-        .revenu { color: #2e7d32; font-weight: bold; }
-        h1 { color: #1976d2; border-bottom: 2px solid #1976d2; padding-bottom: 10px; }
+        body { font-family: -apple-system, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f0f2f5; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        th, td { border: 1px solid #eee; padding: 12px; text-align: left; }
+        th { background-color: #1976d2; color: white; }
+        .header-pot { background-color: #e3f2fd; font-weight: bold; color: #1565c0; }
+        .total-row { background-color: #f5f5f5; font-weight: bold; }
+        .revenu { background-color: #e8f5e9; color: #2e7d32; font-weight: bold; }
+        h1 { text-align: center; color: #1976d2; font-size: 1.5rem; }
     </style>
 </head>
 <body>
-
-    <h1>Gestion du Budget Mensuel</h1>
-
+    <h1>Mon Budget Mensuel</h1>
     <table>
-        <thead>
-            <tr>
-                <th>Catégorie</th>
-                <th>Détail</th>
-                <th>Montant (€)</th>
-            </tr>
-        </thead>
+        <thead><tr><th>Détail</th><th>Montant (€)</th></tr></thead>
         <tbody>
-            <!-- REVENUS -->
-            <tr class="revenu">
-                <td>REVENUS</td>
-                <td>Salaire + Aide Épouse</td>
-                <td>1 800,00 €</td>
-            </tr>
-
-            <!-- POT 1 -->
-            <tr class="header-pot">
-                <td colspan="2">POT 1 : SÉCURITÉ (15%)</td>
-                <td>225,00 €</td>
-            </tr>
-
-            <!-- POT 2 -->
-            <tr class="header-pot">
-                <td colspan="3">POT 2 : CHARGES FIXES</td>
-            </tr>
-            <tr><td></td><td>Loyer</td><td>300,00 €</td></tr>
-            <tr><td></td><td>Essence</td><td>150,00 €</td></tr>
-            <tr><td></td><td>EDF (Électricité)</td><td>137,04 €</td></tr>
-            <tr><td></td><td>Assurances (Auto/Maison)</td><td>94,21 €</td></tr>
-            <tr><td></td><td>Abonnements (Box/Tél/CIC)</td><td>78,35 €</td></tr>
-            <tr><td></td><td>Streaming (Prime/Para/HP)</td><td>12,78 €</td></tr>
-            <tr><td></td><td>Eau</td><td>42,50 €</td></tr>
-            <tr class="total-row">
-                <td colspan="2">TOTAL POT 2</td>
-                <td>814,88 €</td>
-            </tr>
-
-            <!-- POT 3 -->
-            <tr class="header-pot">
-                <td colspan="3">POT 3 : INVESTISSEMENTS & PROJETS (25%)</td>
-            </tr>
-            <tr><td></td><td>Assurance Vie</td><td>100,00 €</td></tr>
-            <tr><td></td><td>Vacances</td><td>100,00 €</td></tr>
-            <tr><td></td><td>Crypto (BTC/Bitstack)</td><td>90,00 €</td></tr>
-            <tr><td></td><td>ETF (PEA)</td><td>50,00 €</td></tr>
-            <tr><td></td><td>Reliquat libre</td><td>35,00 €</td></tr>
-            <tr class="total-row">
-                <td colspan="2">TOTAL POT 3</td>
-                <td>375,00 €</td>
-            </tr>
-
-            <!-- POT 4 -->
-            <tr class="header-pot" style="background-color: #fff3e0;">
-                <td colspan="2">POT 4 : COURANT (Courses & Loisirs)</td>
-                <td>385,12 €</td>
-            </tr>
+            <tr class="revenu"><td>TOTAL REVENUS</td><td>1 800,00 €</td></tr>
+            <tr class="header-pot"><td colspan="2">POT 1 : SÉCURITÉ</td></tr>
+            <tr><td>Épargne précaution</td><td>225,00 €</td></tr>
+            <tr class="header-pot"><td colspan="2">POT 2 : CHARGES FIXES</td></tr>
+            <tr><td>Loyer / Essence</td><td>450,00 €</td></tr>
+            <tr><td>Factures (EDF/Eau/Assur)</td><td>273,75 €</td></tr>
+            <tr><td>Abonnements / Loisirs numériques</td><td>91,13 €</td></tr>
+            <tr class="total-row"><td>TOTAL POT 2</td><td>814,88 €</td></tr>
+            <tr class="header-pot"><td colspan="2">POT 3 : INVESTISSEMENTS</td></tr>
+            <tr><td>Assurance Vie / Vacances</td><td>200,00 €</td></tr>
+            <tr><td>Crypto / ETF / Reliquat</td><td>175,00 €</td></tr>
+            <tr class="total-row"><td>TOTAL POT 3</td><td>375,00 €</td></tr>
+            <tr class="header-pot" style="background-color: #fff3e0; color: #e65100;">
+                <td>POT 4 : COURANT (Courses)</td><td>385,12 €</td></tr>
         </tbody>
     </table>
-
-    <p><i>Note : Ce budget est basé sur un revenu total de 1 800 €.</i></p>
-
 </body>
 </html>
